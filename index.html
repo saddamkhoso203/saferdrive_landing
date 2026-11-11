@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Safer Drive: Distraction-Free Driving for Teams | iPhone &amp; Android</title>
+<meta name="description" content="Safer Drive locks social media and messaging apps once you reach 10 km/h during your duty hours, with auto-reply, trip details and an admin dashboard for companies. Free to download, 14-day free trial.">
+<meta name="theme-color" content="#0A1628">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Safer Drive — Eyes on the road. Phone on lock.">
+<meta property="og:description" content="Locks social media and messaging apps while you drive on duty. Admin dashboard for companies. Free for 14 days.">
+<meta property="og:image" content="assets/img/logo-full.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Safer Drive","operatingSystem":"iOS, Android","applicationCategory":"LifestyleApplication","description":"Safer Drive locks social media and messaging apps once you reach 10 km/h during your duty hours, with auto-reply, trip details and an admin dashboard for companies. Free to download, 14-day free trial.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free to download with a 14-day free trial"}}</script>
+<style>
+:root{--green:#2BAE24;--green-d:#1F8F1A;--mint:#E3F3DF;--mint2:#F2FAF0;--navy:#0A1628;--navy2:#13233A;--ink:#0F1B2D;--text:#46536A;--muted:#7A8699;--line:#E3E8EF;--bg:#FBFCFB;--r:18px;--sh:0 24px 60px -24px rgba(10,22,40,.25);--font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg);font-size:16px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{color:var(--ink);margin:0 0 .5em;line-height:1.12;letter-spacing:-.02em}
+h1{font-size:clamp(38px,5.2vw,64px);font-weight:800}
+h2{font-size:clamp(30px,3.6vw,46px);font-weight:800}
+h3{font-size:20px;font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.g{color:var(--green)}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-d);background:var(--mint);padding:7px 14px;border-radius:40px;margin-bottom:18px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(43,174,36,.2);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(43,174,36,0)}}
+.lead{font-size:clamp(17px,1.5vw,19px);color:var(--text);max-width:560px}
+.sec{padding:110px 0}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+
+/* buttons + store badges */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:14px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(10,22,40,.5)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-d);transform:translateY(-2px)}
+.stores{display:flex;flex-wrap:wrap;gap:12px}
+.store{display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:0 22px 0 18px;border-radius:14px;background:var(--navy);color:#fff;transition:transform .25s,box-shadow .25s;border:1px solid rgba(255,255,255,.08)}
+.store:hover{transform:translateY(-3px);box-shadow:0 16px 34px -14px rgba(10,22,40,.55)}
+.store svg{width:28px;height:28px;flex:0 0 28px}
+.store span{display:flex;flex-direction:column;line-height:1.15}
+.store small{font-size:11px;font-weight:500;opacity:.8;letter-spacing:.02em}
+.store b{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.store.light{background:#fff;color:var(--navy);border-color:var(--line)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(251,252,251,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.hdr.sc{border-color:var(--line);box-shadow:0 8px 30px -20px rgba(10,22,40,.3)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--ink);letter-spacing:-.02em}
+.logo .mk{width:38px;height:38px;border-radius:11px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.logo .mk svg{width:22px;height:22px}
+.nav{display:flex;gap:6px}
+.nav a{font-weight:600;font-size:15px;color:var(--text);padding:10px 14px;border-radius:10px;transition:color .2s,background .2s}
+.nav a:hover{color:var(--ink);background:var(--mint2)}
+.hdr .btn{min-height:46px;padding:0 20px;font-size:14px}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger i{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:.3s}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{display:none}
+
+/* hero */
+.hero{position:relative;padding:56px 0 90px;overflow:hidden}
+.hero:before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;background:var(--mint);right:-260px;top:-180px;z-index:-1}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{margin-bottom:22px}
+.hero .lead{margin-bottom:32px}
+.hero .note{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;font-size:14px;font-weight:600;color:var(--ink)}
+.hero .note span{display:flex;align-items:center;gap:8px}
+.hero .note svg{width:18px;height:18px;color:var(--green)}
+.stage{position:relative;height:640px}
+.phone{position:absolute;width:290px;aspect-ratio:280/648;border-radius:44px;background:#05090F;padding:9px;box-shadow:0 40px 80px -30px rgba(10,22,40,.55),inset 0 0 0 2px #2A3443}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:36px}
+.stage .p1{left:50%;top:10px;transform:translateX(-30%);z-index:2;animation:float 7s ease-in-out infinite}
+.stage .p2{left:50%;top:70px;transform:translateX(-112%) rotate(-7deg) scale(.88);opacity:.96;z-index:1;animation:float2 8s ease-in-out infinite}
+@keyframes float{50%{transform:translateX(-30%) translateY(-14px)}}
+@keyframes float2{50%{transform:translateX(-112%) rotate(-7deg) scale(.88) translateY(-10px)}}
+.chip{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--sh);font-size:14px;font-weight:700;color:var(--ink);white-space:nowrap;text-align:left}
+.chip small{display:block;font-size:12px;font-weight:500;color:var(--muted)}
+.chip .ci{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:var(--mint);color:var(--green)}
+.chip .ci svg{width:20px;height:20px}
+.chip.c1{right:0;top:36px;animation:bob 6s ease-in-out infinite}
+.chip.c2{left:0;bottom:120px;animation:bob 7s ease-in-out infinite .8s}
+.chip.c3{right:20px;bottom:40px;animation:bob 6.5s ease-in-out infinite 1.6s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+
+/* strip */
+.strip{background:var(--navy);color:#C9D3E1;padding:22px 0;overflow:hidden;white-space:nowrap;text-align:left}
+.strip .tr{display:inline-flex;gap:46px;animation:mq 34s linear infinite;padding-left:46px;font-weight:700;font-size:17px}
+.strip span{display:inline-flex;align-items:center;gap:46px}
+.strip span:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* features */
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:56px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;transition:transform .35s,box-shadow .35s,border-color .35s}
+.feat:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:transparent}
+.feat .ic{width:54px;height:54px;border-radius:15px;background:var(--mint);color:var(--green-d);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.feat .ic svg{width:26px;height:26px}
+.feat p{margin:0;font-size:15px}
+
+/* split rows */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.row + .row{margin-top:110px}
+.row.rev>:first-child{order:2}
+.shot{position:relative;display:flex;justify-content:center;padding:40px 0}
+.shot:before{content:"";position:absolute;inset:0 6%;border-radius:36px;background:var(--mint)}
+.shot .phone{position:relative;width:280px}
+.ticks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--ink)}
+.ticks li:before{content:"";flex:0 0 24px;height:24px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:1px}
+
+/* how it works */
+.how{background:var(--navy);color:#C9D3E1;border-radius:36px;margin:0 20px;padding:100px 0}
+.how h2{color:#fff}.how .lead{color:#AAB6C7}
+.how .kicker{background:rgba(43,174,36,.16);color:#7FDB78}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:56px;counter-reset:s}
+.step{background:var(--navy2);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:32px 28px;position:relative}
+.step:before{counter-increment:s;content:counter(s);width:46px;height:46px;border-radius:14px;background:var(--green);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.step h3{color:#fff}
+.step p{margin:0;font-size:15px;color:#AAB6C7}
+
+/* screenshots */
+.gal{position:relative;margin-top:56px}
+.track{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 28px 34px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.track figure{margin:0;flex:0 0 auto;scroll-snap-align:center;text-align:center}
+.track .phone{position:relative;width:250px}
+.track figcaption{margin-top:18px;font-weight:700;color:var(--ink);font-size:15px}
+.gal-ctl{display:flex;justify-content:center;gap:12px;margin-top:6px}
+.gal-ctl button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink);transition:.25s}
+.gal-ctl button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.gal-ctl svg{width:20px;height:20px}
+
+/* privacy */
+.priv{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--mint);border-radius:28px;padding:44px 48px}
+.priv .ic{width:76px;height:76px;border-radius:22px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center}
+.priv .ic svg{width:38px;height:38px}
+.priv h2{font-size:clamp(24px,2.6vw,32px);margin-bottom:8px}
+.priv p{margin:0}
+
+/* faq */
+.faq{max-width:820px;margin:50px auto 0;display:grid;gap:12px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;transition:box-shadow .3s}
+.faq details[open]{box-shadow:var(--sh)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;font-weight:700;font-size:17px;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--mint);position:relative;transition:transform .3s}
+.faq summary i:before,.faq summary i:after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--green-d);transform:translate(-50%,-50%)}
+.faq summary i:after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+.faq details[open] summary i:after{transform:translate(-50%,-50%) rotate(0)}
+.faq details p{padding:0 24px 22px;margin:0}
+
+/* final cta */
+.final{position:relative;background:var(--navy);border-radius:36px;margin:0 20px;padding:90px 0 0;overflow:hidden;color:#C9D3E1}
+.final:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:rgba(43,174,36,.14);right:-200px;top:-260px}
+.final .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.final h2{color:#fff}
+.final .lead{color:#AAB6C7;margin-bottom:32px}
+.final .txt{padding-bottom:90px}
+.final .phone{position:relative;width:300px;margin:0 auto -230px;justify-self:center}
+
+/* footer */
+.foot{padding:44px 0 40px;font-size:14px}
+.foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot a:hover{color:var(--green-d)}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120%);background:var(--navy);color:#fff;padding:14px 22px;border-radius:14px;font-weight:600;font-size:15px;box-shadow:var(--sh);transition:transform .35s;z-index:80;max-width:calc(100% - 32px);text-align:center}
+.toast.on{transform:translate(-50%,0)}
+
+[data-r]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+[data-r].in{opacity:1;transform:none}
+[data-r="2"]{transition-delay:.1s}[data-r="3"]{transition-delay:.2s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}[data-r]{opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+
+
+/* companies */
+.co .sub{font-weight:600;color:var(--ink);margin:0 0 28px;max-width:520px}
+.dash{background:var(--navy);border-radius:26px;padding:22px;box-shadow:var(--sh)}
+.dash-top{display:flex;align-items:center;gap:7px;padding:2px 4px 18px;color:#fff;font-size:14px}
+.dash-top span{width:10px;height:10px;border-radius:50%;background:#33415A}
+.dash-top span:first-child{background:var(--green)}
+.dash-top b{margin-left:8px;font-weight:700}
+.dash-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.di{background:var(--navy2);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:20px}
+.di .ic{width:42px;height:42px;border-radius:12px;background:rgba(43,174,36,.18);color:#7FDB78;display:flex;align-items:center;justify-content:center;margin-bottom:14px;flex:0 0 42px}
+.di .ic svg{width:21px;height:21px}
+.di h3{color:#fff;font-size:16px;margin-bottom:4px}
+.di p{margin:0;font-size:14px;color:#AAB6C7;line-height:1.5}
+.di.wide{grid-column:1/-1;display:flex;gap:16px;align-items:flex-start;background:var(--green);border-color:transparent}
+.di.wide .ic{background:rgba(255,255,255,.2);color:#fff;margin:0}
+.di.wide p{color:#E8F7E6}
+.track figcaption span{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;align-items:center;justify-content:center;margin-right:8px}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:920px;margin:50px auto 0}
+.plan{background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px 32px;display:flex;flex-direction:column}
+.plan .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-d);background:var(--mint);padding:6px 12px;border-radius:30px;margin-bottom:18px}
+.plan h3{font-size:28px;margin-bottom:6px}
+.plan .ticks{margin:20px 0 26px;flex:1}
+.plan .ticks li{font-size:15px}
+.bill{display:flex;gap:8px;margin-bottom:22px}
+.bill span{flex:1;text-align:center;padding:10px;border-radius:12px;background:var(--mint2);border:1px solid var(--line);font-weight:700;font-size:14px;color:var(--ink)}
+.plan.dark{background:var(--navy);border-color:var(--navy);color:#AAB6C7}
+.plan.dark h3,.plan.dark .ticks li{color:#fff}
+.plan.dark .tag{background:rgba(43,174,36,.18);color:#7FDB78}
+.plan.dark .bill span{background:var(--navy2);border-color:rgba(255,255,255,.08);color:#fff}
+@media (max-width:1024px){.nav a{padding:10px 10px}}
+@media (max-width:760px){.plans{grid-template-columns:1fr}}
+@media (max-width:640px){.dash{padding:16px}.dash-grid{grid-template-columns:1fr}.plan{padding:28px 22px}}
+
+.cta2{display:flex;flex-wrap:wrap;gap:12px}
+.btn-line{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn-line:hover{border-color:var(--navy);transform:translateY(-2px)}
+.plan-mail{display:block;text-align:center;margin-top:14px;font-size:14px;font-weight:600;color:#7FDB78;overflow-wrap:anywhere}
+.plan-mail:hover{text-decoration:underline}
+.faq details p a{color:var(--green-d);font-weight:600}
+.fm{display:flex;flex-direction:column;align-items:flex-end;gap:4px}.fm a{font-weight:700;color:var(--ink)}
+@media (max-width:640px){.cta2 .btn{width:100%}.fm{align-items:center}}
+.logo img{height:40px;width:auto}
+.flogo img{height:64px}
+/* testimonials (placeholders until real reviews are added) */
+.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:50px}
+.tcard{margin:0;background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;transition:transform .35s,box-shadow .35s}
+.tcard:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.tcard .qm{width:44px;height:44px;border-radius:13px;background:var(--mint);color:var(--green-d);display:flex;align-items:center;justify-content:center}
+.tcard .qm svg{width:22px;height:22px}
+.tcard blockquote{margin:0;font-size:16px;color:var(--ink);font-weight:500;line-height:1.6;flex:1}
+.tcard .who{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.tcard .av{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
+.tcard .who b{display:block;color:var(--ink);font-size:15px}
+.tcard .who small{font-size:13px;color:var(--muted)}
+.tcard .seg{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-d)}
+.tcard.ph blockquote,.tcard.ph .who b,.tcard.ph .who small{color:#9AA5B5;font-style:italic}
+.tcard.ph{border-style:dashed}
+@media (max-width:1024px){.tests{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}}
+@media (max-width:640px){.logo img{height:34px}.flogo img{height:56px}.tcard{padding:26px 22px}}
+/* responsive */
+@media (max-width:1180px){.nav,.hdr .btn{display:none}.burger{display:flex}.mnav{display:block;position:fixed;top:74px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 20px 20px;transform:translateY(-130%);transition:transform .35s;z-index:40;box-shadow:var(--sh)}.mnav.open{transform:none}.mnav a{display:block;padding:14px 4px;font-weight:700;font-size:17px;color:var(--ink);border-bottom:1px solid var(--line)}.mnav .btn{width:100%;margin-top:16px}}
+@media (max-width:1024px){
+  .nav,.hdr .btn{display:none}
+  .burger{display:flex}
+  .mnav{display:block;position:fixed;top:74px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 20px 20px;transform:translateY(-130%);transition:transform .35s;z-index:40;box-shadow:var(--sh)}
+  .mnav.open{transform:none}
+  .mnav a{display:block;padding:14px 4px;font-weight:700;font-size:17px;color:var(--ink);border-bottom:1px solid var(--line)}
+  .mnav .btn{width:100%;margin-top:16px}
+  .hero .wrap,.row,.final .wrap{grid-template-columns:1fr}
+  .hero{text-align:center;padding-top:40px}
+  .hero .lead{margin-left:auto;margin-right:auto}
+  .hero .stores,.hero .note{justify-content:center}
+  .stage{height:600px;max-width:560px;margin:0 auto;width:100%}
+  .feats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{gap:30px}.row.rev>:first-child{order:0}
+  .row + .row{margin-top:80px}
+  .steps{grid-template-columns:1fr}
+  .final{text-align:center}
+  .final .stores{justify-content:center}
+  .final .lead{margin-left:auto;margin-right:auto}
+  .final .txt{padding-bottom:30px}
+  .sec{padding:84px 0}
+}
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .sec{padding:68px 0}
+  .hdr .wrap{height:66px}.mnav{top:66px}
+  .logo{font-size:18px}.logo .mk{width:34px;height:34px}
+  .stores{flex-direction:column;align-items:stretch}
+  .store{justify-content:center}
+  .hero:before{width:600px;height:600px;right:-300px;top:-120px}
+  .stage{height:520px}
+  .phone{width:240px;border-radius:38px;padding:8px}.phone img{border-radius:31px}
+  .stage .p2{display:none}
+  .stage .p1{transform:translateX(-50%)}
+  @keyframes float{50%{transform:translateX(-50%) translateY(-12px)}}
+  .chip{padding:9px 12px;font-size:13px}.chip .ci{width:32px;height:32px}
+  .chip.c1{right:0;top:60px}.chip.c2{left:0;bottom:140px}.chip.c3{right:0;bottom:30px}
+  .feats{grid-template-columns:1fr;margin-top:40px}
+  .feat{padding:26px 22px}
+  .shot .phone{width:240px}
+  .how,.final{margin:0 10px;border-radius:26px}
+  .how{padding:70px 0}
+  .step{padding:26px 22px}
+  .track .phone{width:220px}
+  .priv{grid-template-columns:1fr;padding:32px 24px;text-align:center}
+  .priv .ic{margin:0 auto}
+  .faq summary{font-size:16px;padding:18px}
+  .faq details p{padding:0 18px 18px}
+  .final{padding-top:64px}
+  .final .phone{width:250px}
+  .foot .wrap{flex-direction:column;text-align:center}
+  .foot nav{justify-content:center}
+}
+@media (max-width:360px){.chip.c2{display:none}.store b{font-size:17px}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Safer Drive home"><img src="assets/img/logo.png" alt="Safer Drive" width="182" height="40"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a><a href="#how">How it works</a><a href="#companies">For companies</a><a href="#flow">App Flow</a><a href="#testimonials">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-navy" href="#download">Download the App</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="#features">Features</a><a href="#how">How it works</a><a href="#companies">For companies</a><a href="#flow">App Flow</a><a href="#testimonials">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+  <a class="btn btn-green" href="#download">Download the App</a>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker" data-r><i></i>Free to download · 14-day free trial</span>
+      <h1 data-r>Eyes on the road.<br><span class="g">Phone on lock.</span></h1>
+      <p class="lead" data-r="2">Safer Drive keeps company drivers focused on the road. Check in for your duty hours, and once you reach 10 km/h your social media and messaging apps are locked. It's built for teams and works for individual drivers too.</p>
+      <div class="stores" data-r="3">
+        <a class="store" href="#" data-store="ios" aria-label="Download Safer Drive on the App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 1.43c0 1.14-.42 2.2-1.12 2.98-.84.95-2.2 1.68-3.3 1.6-.14-1.1.41-2.26 1.1-3 .78-.86 2.12-1.5 3.32-1.58zM20.5 17.2c-.55 1.27-.82 1.84-1.53 2.96-1 1.56-2.4 3.5-4.14 3.52-1.55.01-1.95-1.01-4.05-1-2.1.01-2.54 1.02-4.09 1-1.74-.02-3.07-1.77-4.07-3.33C-.17 15.98-.47 10.95 1.2 8.36c1.18-1.84 3.05-2.92 4.81-2.92 1.79 0 2.91 1 4.39 1 1.43 0 2.31-1 4.38-1 1.56 0 3.22.86 4.4 2.33-3.87 2.12-3.24 7.64 1.32 9.43z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+        <a class="store" href="#" data-store="android" aria-label="Get Safer Drive on Google Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l9.8-10.2z" fill="#00D7FE"/><path d="m16.7 15.4-3.3-3.4 3.3-3.4 3.9 2.2c1.1.6 1.1 1.7 0 2.4z" fill="#FFCE00"/><path d="M16.7 15.4 13.4 12l-9.8 10.2c.4.4 1 .4 1.7 0z" fill="#FF3A44"/><path d="M16.7 8.6 5.3 1.8c-.7-.4-1.3-.4-1.7 0L13.4 12z" fill="#00F076"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
+      </div>
+      <div class="note" data-r="3">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Free to download</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>14 days free</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>For companies &amp; individuals</span>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="phone p2"><img src="assets/img/screen-onboarding.webp" alt=""></div>
+      <div class="phone p1"><img src="assets/img/screen-home.webp" alt=""></div>
+      <div class="chip c1"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Checked in<small>On duty: protection ready</small></span></div>
+      <div class="chip c2"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><span>Apps locked<small>Speed passed 10 km/h</small></span></div>
+      <div class="chip c3"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span>Auto-reply sent<small>"I'm driving, will reply soon"</small></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="tr"><span>Check in for duty</span><span>Apps lock at 10 km/h</span><span>Auto-unlock after 2 min</span><span>Auto-reply to messages</span><span>Trip details</span><span>Safety instructions</span><span>Admin dashboard for companies</span><span>Check in for duty</span><span>Apps lock at 10 km/h</span><span>Auto-unlock after 2 min</span><span>Auto-reply to messages</span><span>Trip details</span><span>Safety instructions</span><span>Admin dashboard for companies</span></div></div>
+
+<!-- FEATURES -->
+<section class="sec" id="features">
+  <div class="wrap">
+    <div class="center" data-r><span class="kicker">Features</span><h2>Built for drivers who are <span class="g">on the clock</span></h2><p class="lead">Check in when your shift starts. While you're on duty, Safer Drive takes care of distractions.</p></div>
+    <div class="feats">
+      <div class="feat" data-r><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Duty-hour check-in</h3><p>Check in when your duty hours start. Safer Drive protects you only while you're on the clock.</p></div>
+      <div class="feat" data-r="2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h3>Locks at 10 km/h</h3><p>When your speed reaches 10 km/h, all your social media and messaging apps are locked right away.</p></div>
+      <div class="feat" data-r="3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-2"/></svg></div><h3>Unlocks when you stop</h3><p>If you're not moving, Safer Drive checks for two minutes and then unlocks your apps.</p></div>
+      <div class="feat" data-r><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div><h3>Smart auto-reply</h3><p>Contacts who message you get an automatic reply saying you're driving and will get back to them soon.</p></div>
+      <div class="feat" data-r="2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8.5a3.5 3.5 0 0 0 0-7h-9a3.5 3.5 0 0 1 0-7H16"/></svg></div><h3>Trip details</h3><p>Every trip is recorded, so drivers and their companies can look back at when and how far they drove.</p></div>
+      <div class="feat" data-r="3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="M12 8v4M12 16h.01"/></svg></div><h3>Safety instructions</h3><p>Practical safety guidance in the app helps drivers build good habits on every trip.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT ROWS -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="row">
+      <div class="shot" data-r><div class="phone"><img src="assets/img/screen-block.webp" alt="Safer Drive app blocking screen" loading="lazy" width="280" height="648"></div></div>
+      <div data-r="2"><span class="kicker">App locking</span><h2>Speed hits 10 km/h. <span class="g">Distractions switch off.</span></h2><p class="lead">Once you're checked in and moving, Safer Drive locks your social media and messaging apps, so there's nothing to scroll and nothing to answer behind the wheel.</p>
+        <ul class="ticks"><li>Locks social media and messaging apps</li><li>Triggers automatically at 10 km/h</li><li>Active only during your duty hours</li></ul></div>
+    </div>
+    <div class="row rev">
+      <div class="shot" data-r><div class="phone"><img src="assets/img/screen-trip.webp" alt="Safer Drive trip completed screen" loading="lazy" width="280" height="648"></div></div>
+      <div data-r="2"><span class="kicker">Smart unlock</span><h2>Stopped? <span class="g">Your apps come back.</span></h2><p class="lead">Safer Drive doesn't keep you locked out for no reason. When you stop moving, it waits two minutes to make sure you've really stopped, then unlocks your apps.</p>
+        <ul class="ticks"><li>Two-minute check when you stop</li><li>Apps unlock by themselves</li><li>Trip details saved after every drive</li></ul></div>
+    </div>
+    <div class="row">
+      <div class="shot" data-r><div class="phone"><img src="assets/img/screen-autoreply.webp" alt="Safer Drive auto-reply setup screen" loading="lazy" width="280" height="648"></div></div>
+      <div data-r="2"><span class="kicker">Auto-reply</span><h2>Stay reachable <span class="g">without picking up</span></h2><p class="lead">While your messaging apps are locked, Safer Drive replies for you, so customers, colleagues and family know you're driving and will be in touch soon.</p>
+        <ul class="ticks"><li>Automatic replies while you drive</li><li>Write your own message</li><li>No need to touch your phone</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="center" data-r><span class="kicker">How it works</span><h2>Safer driving in three simple steps</h2><p class="lead">Set it up once, check in each shift, and drive.</p></div>
+    <div class="steps">
+      <div class="step" data-r><h3>Download &amp; start free</h3><p>Install Safer Drive for free, allow the permissions it needs and enjoy 14 days at no cost.</p></div>
+      <div class="step" data-r="2"><h3>Check in for duty</h3><p>When your duty hours begin, check in. Safer Drive is now ready to protect you.</p></div>
+      <div class="step" data-r="3"><h3>Drive distraction-free</h3><p>At 10 km/h your social media and messaging apps lock. Stop for two minutes and they unlock.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANIES -->
+<section class="sec" id="companies">
+  <div class="wrap">
+    <div class="row co">
+      <div data-r><span class="kicker">For companies</span><h2>One dashboard for <span class="g">your whole team</span></h2><p class="lead">Companies registered with Safer Drive get a dedicated admin dashboard to keep every driver safe and accountable.</p>
+        <p class="sub">Safer Drive is made for company employees who drive for work, and individual drivers can use it too.</p>
+        <div class="cta2"><a class="btn btn-navy" href="#pricing">See company plans</a><a class="btn btn-line" href="mailto:info@saferdrive.app?subject=Safer%20Drive%20for%20my%20company">Talk to sales</a></div></div>
+      <div class="dash" data-r="2">
+        <div class="dash-top"><span></span><span></span><span></span><b>Admin dashboard</b></div>
+        <div class="dash-grid">
+          <div class="di"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span><h3>Phone usage</h3><p>See how employees use their phones on duty.</p></div>
+          <div class="di"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Check-in times</h3><p>Know when each driver checks in for duty.</p></div>
+          <div class="di"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8.5a3.5 3.5 0 0 0 0-7h-9a3.5 3.5 0 0 1 0-7H16"/></svg></span><h3>Trips</h3><p>Review every trip your team takes.</p></div>
+          <div class="di"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><h3>Blocked apps</h3><p>See which apps were locked during drives.</p></div>
+          <div class="di wide"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><div><h3>Custom team notifications</h3><p>Send your own notifications to your teams, from safety reminders to shift updates.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP FLOW -->
+<section class="sec" id="flow" style="padding-top:0">
+  <div class="wrap center" data-r><span class="kicker">App Flow</span><h2>From setup to <span class="g">safe arrival</span></h2><p class="lead">Follow a driver through Safer Drive, screen by screen.</p></div>
+  <div class="gal" data-r="2">
+    <div class="track" tabindex="0" aria-label="App flow screens">
+      <figure><div class="phone"><img src="assets/img/screen-onboarding.webp" alt="Stay Focused onboarding screen" loading="lazy" width="250" height="579"></div><figcaption><span>1</span>Get started</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/screen-block.webp" alt="Apps to block screen" loading="lazy" width="250" height="579"></div><figcaption><span>2</span>Apps that lock</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/screen-autoreply.webp" alt="Auto-reply setup screen" loading="lazy" width="250" height="579"></div><figcaption><span>3</span>Set your auto-reply</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/screen-home.webp" alt="Home screen" loading="lazy" width="250" height="579"></div><figcaption><span>4</span>Check in &amp; drive</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/screen-trip.webp" alt="Trip completed screen" loading="lazy" width="250" height="579"></div><figcaption><span>5</span>Trip completed</figcaption></figure>
+    </div>
+    <div class="gal-ctl"><button type="button" data-dir="-1" aria-label="Previous screens"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" data-dir="1" aria-label="Next screens"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS: replace each [placeholder] with a real review, then remove class "ph" from the card -->
+<section class="sec" id="testimonials" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" data-r><span class="kicker">Testimonials</span><h2>Trusted by drivers <span class="g">and the teams behind them</span></h2><p class="lead">Hear from the people using Safer Drive on the road every day.</p></div>
+    <div class="tests">
+      <figure class="tcard ph" data-r>
+        <span class="qm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.2 6C4.6 7.3 3 9.6 3 12.7V18h6v-6H6c0-2 1-3.4 2.7-4.3zM18.2 6c-2.6 1.3-4.2 3.6-4.2 6.7V18h6v-6h-3c0-2 1-3.4 2.7-4.3z"/></svg></span>
+        <span class="seg">Fleet manager</span>
+        <blockquote>[Real quote from a company using the admin dashboard]</blockquote>
+        <figcaption class="who"><span class="av">?</span><span><b>[Name]</b><small>[Job title, Company]</small></span></figcaption>
+      </figure>
+      <figure class="tcard ph" data-r>
+        <span class="qm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.2 6C4.6 7.3 3 9.6 3 12.7V18h6v-6H6c0-2 1-3.4 2.7-4.3zM18.2 6c-2.6 1.3-4.2 3.6-4.2 6.7V18h6v-6h-3c0-2 1-3.4 2.7-4.3z"/></svg></span>
+        <span class="seg">Company driver</span>
+        <blockquote>[Real quote from an employee who drives on duty]</blockquote>
+        <figcaption class="who"><span class="av">?</span><span><b>[Name]</b><small>[Driver, Company]</small></span></figcaption>
+      </figure>
+      <figure class="tcard ph" data-r>
+        <span class="qm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.2 6C4.6 7.3 3 9.6 3 12.7V18h6v-6H6c0-2 1-3.4 2.7-4.3zM18.2 6c-2.6 1.3-4.2 3.6-4.2 6.7V18h6v-6h-3c0-2 1-3.4 2.7-4.3z"/></svg></span>
+        <span class="seg">Individual driver</span>
+        <blockquote>[Real quote from an individual subscriber]</blockquote>
+        <figcaption class="who"><span class="av">?</span><span><b>[Name]</b><small>[City]</small></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" data-r><span class="kicker">Plans</span><h2>Free to download. <span class="g">Free for 14 days.</span></h2><p class="lead">Try every feature free for 14 days, then choose a monthly or yearly subscription.</p></div>
+    <div class="plans">
+      <div class="plan" data-r>
+        <span class="tag">For individuals</span>
+        <h3>Personal</h3>
+        <p>For anyone who wants to stay focused on the road.</p>
+        <ul class="ticks"><li>Duty-hour check-in</li><li>Social media &amp; messaging locked at 10 km/h</li><li>Auto-unlock after two minutes stopped</li><li>Auto-reply, trip details &amp; safety instructions</li></ul>
+        <div class="bill"><span>Monthly</span><span>Yearly</span></div>
+        <a class="btn btn-green" href="#download">Start 14-day free trial</a>
+      </div>
+      <div class="plan dark" data-r="2">
+        <span class="tag">For companies</span>
+        <h3>Business</h3>
+        <p>For companies with employees who drive for work.</p>
+        <ul class="ticks"><li>Everything in Personal for every employee</li><li>Dedicated admin dashboard</li><li>Phone usage, check-ins, trips &amp; blocked apps</li><li>Custom notifications to your teams</li></ul>
+        <div class="bill"><span>Monthly</span><span>Yearly</span></div>
+        <a class="btn btn-green" href="#download">Start 14-day free trial</a>
+        <a class="plan-mail" href="mailto:info@saferdrive.app?subject=Safer%20Drive%20for%20my%20company">Registering a company? Email info@saferdrive.app</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" data-r><span class="kicker">FAQ</span><h2>Questions? <span class="g">We've got answers.</span></h2></div>
+    <div class="faq" data-r="2">
+      <details open><summary>How do I turn Safer Drive on?<i></i></summary><p>You check in according to your duty hours. Once you're checked in, Safer Drive is ready, and it locks your apps as soon as you start driving.</p></details>
+      <details><summary>When are my apps locked?<i></i></summary><p>As soon as your speed reaches 10 km/h, Safer Drive locks all your social media and messaging apps.</p></details>
+      <details><summary>What happens when I stop?<i></i></summary><p>If you're not moving, Safer Drive checks for two minutes and then unlocks your apps.</p></details>
+      <details><summary>Will people know I'm driving?<i></i></summary><p>Yes. With auto-reply on, people who message you get an automatic reply saying you're driving and will get back to them soon.</p></details>
+      <details><summary>Is it only for company employees?<i></i></summary><p>Safer Drive is designed for company employees who drive for work, but individuals can use it too, with a personal subscription.</p></details>
+      <details><summary>What can companies see?<i></i></summary><p>Companies registered with Safer Drive get an admin dashboard showing their employees' phone usage, check-in times, trips and blocked apps. They can also send custom notifications to their teams.</p></details>
+      <details><summary>How much does it cost?<i></i></summary><p>Safer Drive is free to download and free to use for 14 days. After that, you choose a monthly or yearly subscription. There are plans for both individuals and companies. For company plans, email <a href="mailto:info@saferdrive.app">info@saferdrive.app</a>.</p></details>
+      <details><summary>Is Safer Drive available on iPhone and Android?<i></i></summary><p>Yes. Download Safer Drive from the App Store for iPhone or from Google Play for Android.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="download">
+  <div class="wrap">
+    <div class="txt" data-r>
+      <span class="kicker" style="background:rgba(43,174,36,.16);color:#7FDB78"><i></i>Free for 14 days</span>
+      <h2>Make every shift <span class="g">a safer drive.</span></h2>
+      <p class="lead">Download Safer Drive for free and try it for 14 days, for yourself or for your whole team.</p>
+      <div class="stores">
+        <a class="store light" href="#" data-store="ios" aria-label="Download Safer Drive on the App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 1.43c0 1.14-.42 2.2-1.12 2.98-.84.95-2.2 1.68-3.3 1.6-.14-1.1.41-2.26 1.1-3 .78-.86 2.12-1.5 3.32-1.58zM20.5 17.2c-.55 1.27-.82 1.84-1.53 2.96-1 1.56-2.4 3.5-4.14 3.52-1.55.01-1.95-1.01-4.05-1-2.1.01-2.54 1.02-4.09 1-1.74-.02-3.07-1.77-4.07-3.33C-.17 15.98-.47 10.95 1.2 8.36c1.18-1.84 3.05-2.92 4.81-2.92 1.79 0 2.91 1 4.39 1 1.43 0 2.31-1 4.38-1 1.56 0 3.22.86 4.4 2.33-3.87 2.12-3.24 7.64 1.32 9.43z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+        <a class="store light" href="#" data-store="android" aria-label="Get Safer Drive on Google Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l9.8-10.2z" fill="#00D7FE"/><path d="m16.7 15.4-3.3-3.4 3.3-3.4 3.9 2.2c1.1.6 1.1 1.7 0 2.4z" fill="#FFCE00"/><path d="M16.7 15.4 13.4 12l-9.8 10.2c.4.4 1 .4 1.7 0z" fill="#FF3A44"/><path d="M16.7 8.6 5.3 1.8c-.7-.4-1.3-.4-1.7 0L13.4 12z" fill="#00F076"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
+      </div>
+    </div>
+    <div class="phone" data-r="2"><img src="assets/img/screen-home.webp" alt="Safer Drive home screen" loading="lazy" width="300" height="694"></div>
+  </div>
+</section>
+</main>
+
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="logo flogo" href="#top"><img src="assets/img/logo-full.png" alt="Safer Drive: Attention where it belongs" width="253" height="64"></a>
+    <nav aria-label="Footer"><a href="#features">Features</a><a href="#companies">For companies</a><a href="#flow">App Flow</a><a href="#testimonials">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+    <span class="fm"><a href="mailto:info@saferdrive.app">info@saferdrive.app</a><span>&copy; <span id="yr">2026</span> Safer Drive. All rights reserved.</span></span>
+  </div>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Store links: paste the real URLs here when the listings are live */
+var STORE = {
+  ios: "",      // e.g. "https://apps.apple.com/app/idXXXXXXXXX"
+  android: ""   // e.g. "https://play.google.com/store/apps/details?id=com.saferdrive.app"
+};
+(function () {
+  var d = document;
+  d.querySelectorAll('[data-store]').forEach(function (a) {
+    var url = STORE[a.dataset.store];
+    if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+    else a.addEventListener('click', function (e) { e.preventDefault(); toast('Safer Drive is coming soon to the ' + (a.dataset.store === 'ios' ? 'App Store' : 'Google Play') + '. Stay tuned!'); });
+  });
+  var t = d.querySelector('.toast'), tt;
+  function toast(m) { t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(function () { t.classList.remove('on'); }, 3200); }
+
+  var hdr = d.querySelector('.hdr');
+  addEventListener('scroll', function () { hdr.classList.toggle('sc', scrollY > 8); }, { passive: true });
+
+  var b = d.querySelector('.burger'), m = d.getElementById('mnav');
+  function setNav(o) { m.classList.toggle('open', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); }
+  b.addEventListener('click', function () { setNav(!m.classList.contains('open')); });
+  m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setNav(false); }); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNav(false); });
+
+  var tr = d.querySelector('.track');
+  d.querySelectorAll('.gal-ctl button').forEach(function (btn) {
+    btn.addEventListener('click', function () { tr.scrollBy({ left: +btn.dataset.dir * (tr.querySelector('figure').offsetWidth + 26), behavior: 'smooth' }); });
+  });
+
+  var els = d.querySelectorAll('[data-r]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, { threshold: .12 });
+    els.forEach(function (e) { io.observe(e); });
+  } else els.forEach(function (e) { e.classList.add('in'); });
+
+  d.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
